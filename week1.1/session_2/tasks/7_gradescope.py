@@ -3,7 +3,13 @@
 # You are going to write a very simple program:
 
 # Ask a user to enter two numbers (one per input)
-
+try:
+    num1 = int(input("Enter your first number"))
+    num2 = int(input("Enter your second number"))
+    result = (num1*num2)
+    print("Your result is", result)
+except:
+    print("This is not a number")
 # multiply those numbers together
 
 # print out the result

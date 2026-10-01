@@ -1,7 +1,7 @@
 # For each of these string methods, run the code and work out what they do!
 # add a comment using # to each one to explain what it does
 
-user_string = input("Enter a string: ")
+user_string = input("Please enter a string: ")
 
 print(f"\nOriginal String: {user_string}")
 print(f"Modified String 1: {user_string.lower()}")
