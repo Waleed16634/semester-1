@@ -1,25 +1,22 @@
 # Worksheet 1.2: Task 2 Solution
-import statistics
+import sys
+from util import read_numbers
 
-Users_Numbers = input("Please enter a sequence of float values ")
-Values = []
-for x in Users_Numbers.split():
-    try:
-        Values.append(float(x))
-    except ValueError:
-        print("Error: please enter a valid number")
-        exit()
+Numbers = read_numbers()
 
-if not Values:
-    print("Error: nothing was entered")
-    exit()
+if len(Numbers) == 0:
+    sys.exit("Error: no numbers provided")
 
-Minimum_Value = min(Values)
-Maximum_Value = max(Values)
-Mean_Value = statistics.mean(Values)
-Median_Value = statistics.median(Values)
+Numbers.sort()
+n = len(Numbers)
 
-print("The Minimum Value is", Minimum_Value)
-print("The Maximum Value is", Maximum_Value)
-print("The Mean Value is", Mean_Value)
-print("The Median Value is", Median_Value)
+if n % 2 == 1:
+    median = Numbers[n//2]
+else:
+    median = (Numbers[n//2-1]+Numbers[n//2])/2
+
+
+print("Minimum =", min(Numbers))
+print("Maximum =", max(Numbers))
+print("Mean =", sum(Numbers)/n)
+print("Median =", median)
