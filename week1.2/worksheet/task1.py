@@ -2,16 +2,14 @@
 import sys
 Grade = input("Please enter a grade from 0-100: ")
 
-if Grade.isdecimal() and int(Grade) in range(101):
-    Grade = int(Grade)
-    print("The grade you have entered is valid")
+if not Grade.isdecimal() or int(Grade) > 100:
+    sys.exit("Error: Grade must be an integer between 0 and 100")
 
-    if Grade >= 70:
-        print(Grade, "is a distinction")
-    elif Grade >= 40:
-        print(Grade, "is a pass")
-    else:
-        print(Grade, "is a fail")
+Grade = int(Grade)
 
+if Grade >= 70:
+    print(Grade, "is a Distinction")
+elif Grade >= 40:
+    print(Grade, "is a Pass")
 else:
-    print("Error: Grade must be an integer between 0 an 100")
+    print(Grade, "is a Fail")
