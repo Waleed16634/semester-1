@@ -11,10 +11,13 @@ from datetime import date
 
 class Person:
     """
-    A Person, with a name and a date of birth.
+    A person including their name and date of birth
     """
 
     def __init__(self, name, birth):
+        """
+        Initializes the person with their name and their date of birth object
+        """
         if not isinstance(name, str):
             raise TypeError("Name must be a string")
         if name == "":
@@ -27,9 +30,15 @@ class Person:
         self.birth = birth
 
     def initials(self):
+        """
+        Returns the initial letters in the form of upper case for each part of the person's name
+        """
         parts = self.name.split()
         return "".join([part[0].upper() for part in parts])
 
     def is_birthday(self):
+        """
+        If the persons birthday is that day it will return true otherwise it'll return false
+        """
         today = date.today()
         return today.month == self.birth.month and today.day == self.birth.day
