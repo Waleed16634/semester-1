@@ -14,8 +14,7 @@ class Person:
     A Person, with a name and a date of birth.
     """
 
-    def __init__(self,name,birth):
-
+    def __init__(self, name, birth):
         if not isinstance(name, str):
             raise TypeError("Name must be a string")
         if name == "":
