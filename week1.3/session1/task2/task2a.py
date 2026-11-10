@@ -1,7 +1,7 @@
 # Week 1.3, Session 1: Task 2a
 
 k = 2
-while True:
+while k <= 200:
     k = 2 * k 
     print(k)
     
@@ -12,3 +12,5 @@ while True:
 # 1. Add a break statement to exit the loop if k>200
 
 # 2. Rewrite the code to directly use the while loop instead of break.
+
+
