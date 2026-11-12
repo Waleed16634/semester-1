@@ -2,9 +2,9 @@
 
 sum = 0
 
-for k in range(1,21):
-    if k % 2 == 0:
-    sum = sum + k ** 2
+for x in range(1,21):
+    if x % 2 == 0:
+    sum = sum + x ** 2
 
 print(sum)
 
