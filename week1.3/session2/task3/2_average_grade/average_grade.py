@@ -2,7 +2,8 @@
 
 # Open 'student_data.csv' to read each student's grades
 # hint: skip the header row with data[1:]
-
+with open('student_data.csv', 'r') as file:
+  data = file.readlines()
 
 # Read each student's grades and calculate their average grade
 # hint: CSV data comes as strings, convert grade columns to int() for maths
@@ -11,6 +12,10 @@
 
 
 # Open a file called 'report.txt'
+with open('report.txt' , 'w') as file:
+  
+
+
 # Write each student's name and their average grade to the report
 # hint: use 'w' mode to create a fresh report each time
 # hint: format averages nicely, maybe to 2 decimal places with :.2f
