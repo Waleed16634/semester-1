@@ -17,8 +17,22 @@ def countdown(n):
     # Complete your code here
     # base case
 
-    # recursive case
+    if n < 0:
+        return
+    
+    print(n)
 
+    # recursive case
+    countdown(n-1)
+
+def countdown_loop(n):
+
+    while n >= 0:
+        print(n)
+        n = n-1
+
+countdown(30) 
+countdown(5) 
 
 # check if correct output is produced
 countdown(30)    # 30 ... 0 (Note: each number is printed in a separate line)
