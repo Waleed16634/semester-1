@@ -1,5 +1,7 @@
 # Week 1.5, Session 1: Task 3
 
+import math
+
 class Point:
     """
     A Point in 2D space.
