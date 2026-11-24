@@ -3,6 +3,9 @@
 # What does the runtime error mean?
 # How do we fix the code?
 
+
+
+
 class Point:
     """
     A point in 2D space.
@@ -12,7 +15,7 @@ class Point:
         """
         Creates a Point, given x & y coordinates.
         """
-        self.x = x_coordinate
+        self.x = x_coordinate  # For every element in the def __init__ we need to define it by giving self.(variable)
         self.y = y_coordinate
 
 
